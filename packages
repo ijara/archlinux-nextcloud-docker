@@ -1,4 +1,7 @@
 sed
 gzip
-pacman
-systemd
+nextcloud
+php-gd
+php-intl
+mariadb
+nginx
