@@ -5,6 +5,7 @@ DOCKER_IMAGE:=mariadb
 rootfs:
 	$(eval TMPDIR := $(shell mktemp -d))
 	env -i pacstrap -C /usr/share/devtools/pacman-extra.conf -c -d -G -M $(TMPDIR) $(shell cat packages)
+	mkdir -p rootfs/run/mysqld
 	cp --recursive --preserve=timestamps --backup --suffix=.pacnew rootfs/* $(TMPDIR)/
 	tar --numeric-owner --xattrs --acls --exclude-from=exclude -C $(TMPDIR) -c . -f archlinux.tar
 	rm -rf $(TMPDIR)
