@@ -1,10 +1,8 @@
 sed
 gzip
 nextcloud
-php-apache
 php-gd
 php-intl
 php-fpm
-mariadb
-apache
+nginx
 base
