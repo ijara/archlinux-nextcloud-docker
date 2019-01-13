@@ -1,6 +1,6 @@
-DOCKER_USER:=pierres
+DOCKER_USER:=karlyan
 DOCKER_ORGANIZATION=archlinux
-DOCKER_IMAGE:=base
+DOCKER_IMAGE:=mariadb
 
 rootfs:
 	$(eval TMPDIR := $(shell mktemp -d))
